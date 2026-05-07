@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Towerific — Legal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg-start: #EAF4FF;
+      --bg-mid: #F0EEFF;
+      --bg-end: #FFF0F8;
+      --blue: #4DB6FF;
+      --purple: #A87FFF;
+      --gold: #FFCC02;
+      --orange: #FF8C42;
+      --red: #FF6B6B;
+      --green: #5CC85C;
+      --dark: #1A1040;
+      --muted: rgba(26,16,64,0.55);
+      --card-bg: #FFFFFF;
+      --card-border: rgba(26,16,64,0.08);
+      --radius: 16px;
+      --max-w: 760px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, var(--bg-start) 0%, var(--bg-mid) 50%, var(--bg-end) 100%);
+      min-height: 100vh;
+      color: var(--dark);
+      line-height: 1.7;
+    }
+
+    /* ── Navigation ── */
+    .site-nav {
+      background: rgba(255,255,255,0.85);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--card-border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .nav-inner {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 12px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .nav-brand {
+      font-weight: 700;
+      font-size: 1rem;
+      background: linear-gradient(90deg, var(--blue), var(--purple));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-decoration: none;
+    }
+    .nav-links {
+      display: flex;
+      gap: 20px;
+      list-style: none;
+      flex-wrap: wrap;
+    }
+    .nav-links a {
+      font-size: 0.82rem;
+      font-weight: 500;
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--blue); }
+    .nav-links a.active { color: var(--blue); font-weight: 600; }
+
+    /* ── Page wrapper ── */
+    .page {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+    }
+
+    /* ── Hero / Header ── */
+    .hero {
+      text-align: center;
+      margin-bottom: 56px;
+    }
+    .hero-badge {
+      display: inline-block;
+      background: linear-gradient(90deg, var(--blue), var(--purple));
+      color: #fff;
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 4px 14px;
+      border-radius: 999px;
+      letter-spacing: 0.05em;
+      margin-bottom: 18px;
+    }
+    .hero h1 {
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 800;
+      background: linear-gradient(90deg, var(--blue), var(--purple));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1.2;
+      margin-bottom: 14px;
+    }
+    .hero p {
+      font-size: 1rem;
+      color: var(--muted);
+      max-width: 520px;
+      margin: 0 auto;
+    }
+
+    /* ── Tower icon visual ── */
+    .tower-visual {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 5px;
+      margin: 0 auto 32px;
+      width: fit-content;
+    }
+    .tower-block {
+      border-radius: 8px;
+      height: 20px;
+    }
+    .tb1 { width: 48px; background: var(--blue); opacity: 0.9; }
+    .tb2 { width: 64px; background: var(--purple); opacity: 0.85; }
+    .tb3 { width: 80px; background: var(--orange); opacity: 0.8; }
+    .tb4 { width: 96px; background: var(--gold); opacity: 0.85; }
+    .tb5 { width: 110px; background: var(--green); opacity: 0.8; }
+
+    /* ── Cards grid ── */
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+    }
+
+    .legal-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius);
+      padding: 28px 24px;
+      text-decoration: none;
+      color: inherit;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      box-shadow: 0 2px 16px rgba(77,182,255,0.07);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .legal-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 32px rgba(77,182,255,0.18);
+    }
+    .card-icon {
+      font-size: 2rem;
+      line-height: 1;
+    }
+    .card-title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--dark);
+    }
+    .card-desc {
+      font-size: 0.85rem;
+      color: var(--muted);
+      flex: 1;
+    }
+    .card-link {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--blue);
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      margin-top: 4px;
+    }
+
+    /* ── App info strip ── */
+    .app-info {
+      margin-top: 48px;
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius);
+      padding: 24px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 16px;
+    }
+    .info-item { }
+    .info-label {
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+    }
+    .info-value {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--dark);
+      margin-top: 2px;
+    }
+
+    /* ── Footer ── */
+    footer {
+      text-align: center;
+      padding: 32px 24px;
+      font-size: 0.8rem;
+      color: var(--muted);
+      border-top: 1px solid var(--card-border);
+      margin-top: 40px;
+    }
+    footer strong { color: var(--dark); }
+
+    @media (max-width: 500px) {
+      .hero h1 { font-size: 1.8rem; }
+      .cards-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="site-nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-brand">🏗️ Towerific</a>
+      <ul class="nav-links">
+        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+        <li><a href="terms-and-conditions.html">Terms &amp; Conditions</a></li>
+        <li><a href="support.html">Support</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="page">
+
+    <!-- Hero -->
+    <header class="hero">
+      <div class="tower-visual" aria-hidden="true">
+        <div class="tower-block tb1"></div>
+        <div class="tower-block tb2"></div>
+        <div class="tower-block tb3"></div>
+        <div class="tower-block tb4"></div>
+        <div class="tower-block tb5"></div>
+      </div>
+      <span class="hero-badge">Legal Documents</span>
+      <h1>Towerific — Legal</h1>
+      <p>All legal information for <strong>Towerific — Tower Stack Rush</strong> by Shayona. Choose a document below.</p>
+    </header>
+
+    <!-- Document Cards -->
+    <section class="cards-grid">
+
+      <a href="privacy-policy.html" class="legal-card">
+        <div class="card-icon">🔒</div>
+        <div class="card-title">Privacy Policy</div>
+        <div class="card-desc">How we handle your data, advertising (AdMob), app tracking, and in-app purchases.</div>
+        <div class="card-link">View <span>→</span></div>
+      </a>
+
+      <a href="terms-and-conditions.html" class="legal-card">
+        <div class="card-icon">📋</div>
+        <div class="card-title">Terms &amp; Conditions</div>
+        <div class="card-desc">Rules governing your use of the game, purchases, intellectual property, and liability.</div>
+        <div class="card-link">View <span>→</span></div>
+      </a>
+
+      <a href="support.html" class="legal-card">
+        <div class="card-icon">💬</div>
+        <div class="card-title">Support</div>
+        <div class="card-desc">FAQs about coins, purchases, ads, streaks, and power-ups. Contact us for help.</div>
+        <div class="card-link">View <span>→</span></div>
+      </a>
+
+    </section>
+
+    <!-- App Info -->
+    <div class="app-info">
+      <div class="info-item">
+        <div class="info-label">App</div>
+        <div class="info-value">Towerific — Tower Stack Rush</div>
+      </div>
+      <div class="info-item">
+        <div class="info-label">Developer</div>
+        <div class="info-value">Shayona</div>
+      </div>
+      <div class="info-item">
+        <div class="info-label">Bundle ID</div>
+        <div class="info-value">com.shayona.towerific</div>
+      </div>
+      <div class="info-item">
+        <div class="info-label">Platform</div>
+        <div class="info-value">iOS (iPhone)</div>
+      </div>
+      <div class="info-item">
+        <div class="info-label">Last Updated</div>
+        <div class="info-value">May 7, 2026</div>
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    <p>&copy; 2026 <strong>Shayona</strong>. Towerific — Tower Stack Rush. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

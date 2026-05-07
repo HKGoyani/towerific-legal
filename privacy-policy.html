@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — Towerific</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg-start: #EAF4FF;
+      --bg-mid: #F0EEFF;
+      --bg-end: #FFF0F8;
+      --blue: #4DB6FF;
+      --purple: #A87FFF;
+      --gold: #FFCC02;
+      --orange: #FF8C42;
+      --red: #FF6B6B;
+      --green: #5CC85C;
+      --dark: #1A1040;
+      --muted: rgba(26,16,64,0.55);
+      --card-bg: #FFFFFF;
+      --card-border: rgba(26,16,64,0.08);
+      --radius: 16px;
+      --max-w: 760px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, var(--bg-start) 0%, var(--bg-mid) 50%, var(--bg-end) 100%);
+      min-height: 100vh;
+      color: var(--dark);
+      line-height: 1.75;
+    }
+
+    /* ── Navigation ── */
+    .site-nav {
+      background: rgba(255,255,255,0.85);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--card-border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .nav-inner {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 12px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .nav-brand {
+      font-weight: 700;
+      font-size: 1rem;
+      background: linear-gradient(90deg, var(--blue), var(--purple));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-decoration: none;
+    }
+    .nav-links {
+      display: flex;
+      gap: 20px;
+      list-style: none;
+      flex-wrap: wrap;
+    }
+    .nav-links a {
+      font-size: 0.82rem;
+      font-weight: 500;
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--blue); }
+    .nav-links a.active { color: var(--blue); font-weight: 600; }
+
+    /* ── Page wrapper ── */
+    .page {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+    }
+
+    /* ── Page Header ── */
+    .page-header {
+      margin-bottom: 40px;
+    }
+    .page-header .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.82rem;
+      font-weight: 500;
+      color: var(--blue);
+      text-decoration: none;
+      margin-bottom: 20px;
+      transition: opacity 0.2s;
+    }
+    .page-header .back-link:hover { opacity: 0.75; }
+    .page-header h1 {
+      font-size: clamp(1.7rem, 4vw, 2.4rem);
+      font-weight: 800;
+      background: linear-gradient(90deg, var(--blue), var(--purple));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1.25;
+      margin-bottom: 8px;
+    }
+    .page-header .meta {
+      font-size: 0.82rem;
+      color: var(--muted);
+    }
+
+    /* ── Cards ── */
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius);
+      padding: 28px 28px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 12px rgba(77,182,255,0.06);
+    }
+
+    /* ── Section heading ── */
+    .card h2 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      background: linear-gradient(90deg, var(--blue), var(--purple));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .card h2 .num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 26px;
+      height: 26px;
+      border-radius: 8px;
+      background: linear-gradient(135deg, var(--blue), var(--purple));
+      color: #fff;
+      font-size: 0.72rem;
+      font-weight: 700;
+      flex-shrink: 0;
+      -webkit-text-fill-color: #fff;
+    }
+
+    /* ── Body text ── */
+    .card p {
+      font-size: 0.92rem;
+      color: var(--dark);
+      margin-bottom: 12px;
+    }
+    .card p:last-child { margin-bottom: 0; }
+
+    /* ── Lists ── */
+    .card ul, .card ol {
+      margin: 10px 0 12px 0;
+      padding-left: 0;
+      list-style: none;
+    }
+    .card ul li, .card ol li {
+      font-size: 0.92rem;
+      color: var(--dark);
+      padding: 4px 0 4px 22px;
+      position: relative;
+    }
+    .card ul li::before {
+      content: '●';
+      color: var(--blue);
+      font-size: 0.6rem;
+      position: absolute;
+      left: 4px;
+      top: 7px;
+    }
+    .card ol {
+      counter-reset: ol-counter;
+    }
+    .card ol li {
+      counter-increment: ol-counter;
+    }
+    .card ol li::before {
+      content: counter(ol-counter) '.';
+      color: var(--blue);
+      font-size: 0.82rem;
+      font-weight: 600;
+      position: absolute;
+      left: 0;
+      top: 4px;
+    }
+
+    /* ── Highlight box ── */
+    .highlight-box {
+      background: linear-gradient(135deg, rgba(77,182,255,0.08), rgba(168,127,255,0.08));
+      border: 1px solid rgba(77,182,255,0.2);
+      border-radius: 10px;
+      padding: 14px 18px;
+      margin: 12px 0;
+      font-size: 0.9rem;
+    }
+    .highlight-box strong { color: var(--blue); }
+
+    /* ── Contact box ── */
+    .contact-box {
+      background: linear-gradient(135deg, rgba(255,204,2,0.12), rgba(255,140,66,0.12));
+      border: 1.5px solid rgba(255,140,66,0.3);
+      border-radius: var(--radius);
+      padding: 24px 28px;
+      margin-top: 8px;
+    }
+    .contact-box p { margin-bottom: 8px; font-size: 0.9rem; }
+    .contact-box a {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: linear-gradient(90deg, var(--gold), var(--orange));
+      color: var(--dark);
+      font-weight: 700;
+      font-size: 0.9rem;
+      padding: 10px 22px;
+      border-radius: 999px;
+      text-decoration: none;
+      margin-top: 6px;
+      transition: opacity 0.2s, transform 0.2s;
+    }
+    .contact-box a:hover { opacity: 0.88; transform: translateY(-1px); }
+
+    /* ── External link ── */
+    .ext-link {
+      color: var(--blue);
+      font-weight: 500;
+      text-decoration: none;
+      border-bottom: 1px solid rgba(77,182,255,0.3);
+      transition: border-color 0.2s;
+    }
+    .ext-link:hover { border-color: var(--blue); }
+
+    /* ── Footer ── */
+    footer {
+      text-align: center;
+      padding: 32px 24px;
+      font-size: 0.8rem;
+      color: var(--muted);
+      border-top: 1px solid var(--card-border);
+      margin-top: 16px;
+    }
+    footer strong { color: var(--dark); }
+
+    @media (max-width: 500px) {
+      .card { padding: 20px 18px; }
+      .page-header h1 { font-size: 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="site-nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-brand">🏗️ Towerific</a>
+      <ul class="nav-links">
+        <li><a href="privacy-policy.html" class="active">Privacy Policy</a></li>
+        <li><a href="terms-and-conditions.html">Terms &amp; Conditions</a></li>
+        <li><a href="support.html">Support</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="page">
+
+    <!-- Page Header -->
+    <header class="page-header">
+      <a href="index.html" class="back-link">← Back to Legal Home</a>
+      <h1>Privacy Policy</h1>
+      <p class="meta">App: Towerific — Tower Stack Rush &nbsp;·&nbsp; Developer: Shayona &nbsp;·&nbsp; Last updated: May 7, 2026</p>
+    </header>
+
+    <!-- 1. Overview -->
+    <div class="card">
+      <h2><span class="num">1</span> Overview</h2>
+      <p>Towerific — Tower Stack Rush ("the Game", "we", "our", or "us") is a free-to-play mobile game developed by <strong>Shayona</strong> and published on the Apple App Store for iPhone. We are committed to protecting your privacy.</p>
+      <p>This Privacy Policy explains what information is and is not collected when you play the Game, how advertising is served, and how your in-app purchases are handled. By downloading and playing the Game, you agree to this policy.</p>
+      <div class="highlight-box">
+        <strong>In short:</strong> We do not collect any personally identifiable information (PII). All gameplay data is stored only on your device. Ads are served by Google AdMob, which may use your device's advertising identifier (IDFA) with your permission.
+      </div>
+    </div>
+
+    <!-- 2. Information We Do Not Collect -->
+    <div class="card">
+      <h2><span class="num">2</span> Information We Do Not Collect</h2>
+      <p>Towerific does <strong>not</strong> collect, transmit, or store any of the following on our servers:</p>
+      <ul>
+        <li>Your name, username, or any identifier you choose</li>
+        <li>Your email address or phone number</li>
+        <li>Your precise or approximate location (GPS, Wi-Fi triangulation, etc.)</li>
+        <li>Access to your camera, microphone, contacts, or photos</li>
+        <li>Your device's calendar, reminders, or health data</li>
+        <li>Your browsing history or search history</li>
+        <li>Any financial or payment information</li>
+        <li>Your Apple ID or any third-party account credentials</li>
+        <li>Your IP address or persistent device identifiers (beyond what AdMob collects — see Section 4)</li>
+      </ul>
+      <p>We have no backend servers that receive gameplay data. Your experience is entirely local to your device.</p>
+    </div>
+
+    <!-- 3. Data Stored on Your Device -->
+    <div class="card">
+      <h2><span class="num">3</span> Data Stored on Your Device</h2>
+      <p>The Game saves certain gameplay information locally on your iPhone using iOS standard storage (UserDefaults / local file system). This data never leaves your device and is not accessible by us. It includes:</p>
+      <ul>
+        <li><strong>High score</strong> — your best tower height or score achieved</li>
+        <li><strong>Coins</strong> — your current in-game coin balance earned or purchased</li>
+        <li><strong>Settings</strong> — sound on/off, haptics preferences, and other display settings</li>
+        <li><strong>Daily streak</strong> — how many consecutive days you have played</li>
+        <li><strong>XP and level</strong> — your current experience points and player level</li>
+      </ul>
+      <p>This data is deleted automatically when you uninstall the Game. We have no ability to recover it once deleted.</p>
+    </div>
+
+    <!-- 4. Advertising — Google AdMob -->
+    <div class="card">
+      <h2><span class="num">4</span> Advertising — Google AdMob</h2>
+      <p>The Game is free to play and is supported by advertising. We use <strong>Google AdMob</strong> (a service provided by Google LLC) to serve advertisements within the Game.</p>
+      <p><strong>What AdMob may collect:</strong> Google AdMob may collect and use your device's advertising identifier (IDFA — Identifier for Advertisers), as well as general device and usage information, to serve ads that may be relevant to you. This is only done after you grant permission through the App Tracking Transparency (ATT) prompt (see Section 5).</p>
+      <p><strong>Personalised vs. non-personalised ads:</strong></p>
+      <ul>
+        <li>If you <strong>allow tracking</strong> in the ATT prompt, AdMob may show you personalised ads based on your interests and prior app activity across other companies' apps and websites.</li>
+        <li>If you <strong>decline tracking</strong>, AdMob will only show contextual (non-personalised) ads and your IDFA will not be used for targeted advertising.</li>
+      </ul>
+      <p>Google's data practices are governed by their own privacy policy. You can review it at:</p>
+      <ul>
+        <li><a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" class="ext-link">Google Privacy Policy</a></li>
+        <li><a href="https://adssettings.google.com" target="_blank" rel="noopener noreferrer" class="ext-link">Google Ad Settings &amp; Opt-Out (adssettings.google.com)</a></li>
+      </ul>
+      <p>We do not control the content of ads served by AdMob and are not responsible for the data practices of Google or its advertising partners.</p>
+    </div>
+
+    <!-- 5. App Tracking Transparency -->
+    <div class="card">
+      <h2><span class="num">5</span> App Tracking Transparency (ATT)</h2>
+      <p>In compliance with Apple's App Tracking Transparency framework (available on iOS 14.5 and later), the Game will present you with a system prompt the first time you launch it. This prompt asks whether you consent to the Game tracking your activity across other companies' apps and websites.</p>
+      <p><strong>If you tap "Allow":</strong> Your IDFA is shared with Google AdMob for the purpose of showing you personalised advertisements. This may result in ads that are more relevant to your interests.</p>
+      <p><strong>If you tap "Ask App Not to Track":</strong> Your IDFA is not shared with AdMob. You will still see ads, but they will be non-personalised (contextual only). The Game's core functionality remains fully available regardless of your choice.</p>
+      <p><strong>Changing your choice later:</strong> You can change your tracking preference at any time by going to:</p>
+      <ul>
+        <li><strong>Settings → Privacy &amp; Security → Tracking</strong>, then toggle Towerific on or off.</li>
+        <li>Alternatively, go to <strong>Settings → Towerific</strong> and adjust the tracking permission there.</li>
+      </ul>
+      <div class="highlight-box">
+        Your choice does not affect your ability to play the Game. All features, including in-app purchases and gameplay, work identically regardless of your ATT decision.
+      </div>
+    </div>
+
+    <!-- 6. In-App Purchases -->
+    <div class="card">
+      <h2><span class="num">6</span> In-App Purchases</h2>
+      <p>Towerific offers in-app purchases (IAP) in the form of coin packs. These are <strong>consumable</strong> purchases — coins are spent within the Game and cannot be transferred, traded, or refunded (except as required by Apple's policies or applicable law).</p>
+      <p>The Game currently offers five coin pack tiers at different price points. Prices vary by region and are set in accordance with Apple's App Store pricing tiers.</p>
+      <p><strong>Payment processing:</strong> All in-app purchases are processed entirely by <strong>Apple App Store</strong> using <strong>Apple StoreKit</strong>. We, Shayona, never receive, process, or store your payment card details, Apple ID credentials, or any other financial information. Apple's payment policies and data practices apply to all transactions.</p>
+      <p><strong>Receipts and verification:</strong> Apple provides us only with transaction receipt data (purchase confirmation and product ID) to verify that a purchase was made. No personal or financial details are shared with us.</p>
+      <p><strong>Refunds:</strong> Refund requests must be submitted to Apple. You can request a refund through Apple's report-a-problem page at <a href="https://reportaproblem.apple.com" target="_blank" rel="noopener noreferrer" class="ext-link">reportaproblem.apple.com</a>.</p>
+    </div>
+
+    <!-- 7. Third-Party Services -->
+    <div class="card">
+      <h2><span class="num">7</span> Third-Party Services</h2>
+      <p>The Game integrates the following third-party services. Each service is governed by its own privacy policy and terms.</p>
+      <ul>
+        <li>
+          <strong>Google AdMob</strong> — ad serving and monetisation. Provided by Google LLC.<br />
+          Privacy Policy: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" class="ext-link">policies.google.com/privacy</a>
+        </li>
+        <li>
+          <strong>Apple StoreKit</strong> — in-app purchase processing. Provided by Apple Inc.<br />
+          Privacy Policy: <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener noreferrer" class="ext-link">apple.com/legal/privacy</a>
+        </li>
+        <li>
+          <strong>Apple App Store</strong> — app distribution, installation, and update delivery. Provided by Apple Inc.
+        </li>
+      </ul>
+      <p>We are not responsible for the privacy practices of these third-party services. We encourage you to review their respective privacy policies.</p>
+    </div>
+
+    <!-- 8. Children's Privacy -->
+    <div class="card">
+      <h2><span class="num">8</span> Children's Privacy</h2>
+      <p>Towerific is a casual tower-stacking game suitable for players of all ages. The Game is rated suitable for all audiences on the Apple App Store.</p>
+      <p>We do not knowingly collect any personal information from children under the age of 13 (or the applicable age of digital consent in your jurisdiction). Because we collect no personal data at all, the Game is safe for children to play.</p>
+      <p>However, <strong>the App Tracking Transparency (ATT) prompt</strong> relates to ad personalisation. For children under 13, parents or guardians should make the tracking consent decision. You can disable tracking for all apps on a device by going to <strong>Settings → Screen Time → Content &amp; Privacy Restrictions → Tracking</strong>.</p>
+      <p>If you believe a child has been subject to advertising practices that are inappropriate, please contact us using the details in Section 12 and we will investigate.</p>
+    </div>
+
+    <!-- 9. Data Security -->
+    <div class="card">
+      <h2><span class="num">9</span> Data Security</h2>
+      <p>Because Towerific does not transmit any gameplay data to external servers, the primary security consideration is the protection of your device's local storage, which is managed by Apple's iOS security model (sandboxing, data protection APIs).</p>
+      <p>For advertising data, Google AdMob communicates with Google's servers over encrypted HTTPS/TLS connections. We do not have control over these communications, but Google employs industry-standard security practices.</p>
+      <p>For in-app purchases, all payment data is handled exclusively by Apple's secure payment infrastructure. We never receive or store payment credentials.</p>
+      <p>No method of electronic storage or transmission is 100% secure. However, given that we collect no personal data, the risk of a data breach affecting your personal information through our Game is minimal.</p>
+    </div>
+
+    <!-- 10. Your Rights -->
+    <div class="card">
+      <h2><span class="num">10</span> Your Rights</h2>
+      <p>Because we do not collect or store personal data on our servers, many traditional data subject rights (access, rectification, portability) are not directly applicable. However, you have the following controls:</p>
+      <ul>
+        <li><strong>Opt out of personalised ads:</strong> Decline the ATT prompt, or change your tracking settings in iOS Settings at any time.</li>
+        <li><strong>Reset advertising ID:</strong> On iOS, go to <strong>Settings → Privacy &amp; Security → Tracking</strong> and toggle off "Allow Apps to Request to Track". This limits ad tracking for all apps.</li>
+        <li><strong>Opt out via Google:</strong> Visit <a href="https://adssettings.google.com" target="_blank" rel="noopener noreferrer" class="ext-link">adssettings.google.com</a> to manage your Google ad preferences.</li>
+        <li><strong>Delete your game data:</strong> Uninstalling the Game permanently deletes all locally stored data (scores, coins, settings, streak, XP). This action cannot be undone.</li>
+        <li><strong>Contact us:</strong> If you have any questions or concerns about privacy, contact us at the address in Section 12.</li>
+      </ul>
+      <p>If you are located in the European Economic Area (EEA), United Kingdom, or California, you may have additional rights under GDPR, UK GDPR, or CCPA respectively. Contact us to exercise those rights.</p>
+    </div>
+
+    <!-- 11. Changes to Policy -->
+    <div class="card">
+      <h2><span class="num">11</span> Changes to This Policy</h2>
+      <p>We may update this Privacy Policy from time to time to reflect changes in the Game, applicable law, or our data practices. When we make material changes, we will update the "Last updated" date at the top of this page.</p>
+      <p>We encourage you to review this Privacy Policy periodically. If you continue to use the Game after changes are posted, you are deemed to have accepted the updated policy.</p>
+      <p>Significant changes will be highlighted in the App Store release notes for the relevant update version.</p>
+    </div>
+
+    <!-- 12. Contact Us -->
+    <div class="card">
+      <h2><span class="num">12</span> Contact Us</h2>
+      <p>If you have any questions, concerns, or requests regarding this Privacy Policy or our data practices, please contact us. We aim to respond within 24–48 hours.</p>
+      <div class="contact-box">
+        <p><strong>Shayona</strong> — Towerific — Tower Stack Rush</p>
+        <p>Bundle ID: com.shayona.towerific</p>
+        <p>Platform: iOS (iPhone)</p>
+        <a href="mailto:harigo1234@gmail.com">✉ harigo1234@gmail.com</a>
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    <p>&copy; 2026 <strong>Shayona</strong>. Towerific — Tower Stack Rush. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

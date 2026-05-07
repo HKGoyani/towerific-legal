@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terms &amp; Conditions — Towerific</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg-start: #EAF4FF;
+      --bg-mid: #F0EEFF;
+      --bg-end: #FFF0F8;
+      --blue: #4DB6FF;
+      --purple: #A87FFF;
+      --gold: #FFCC02;
+      --orange: #FF8C42;
+      --red: #FF6B6B;
+      --green: #5CC85C;
+      --dark: #1A1040;
+      --muted: rgba(26,16,64,0.55);
+      --card-bg: #FFFFFF;
+      --card-border: rgba(26,16,64,0.08);
+      --radius: 16px;
+      --max-w: 760px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, var(--bg-start) 0%, var(--bg-mid) 50%, var(--bg-end) 100%);
+      min-height: 100vh;
+      color: var(--dark);
+      line-height: 1.75;
+    }
+
+    /* ── Navigation ── */
+    .site-nav {
+      background: rgba(255,255,255,0.85);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--card-border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .nav-inner {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 12px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .nav-brand {
+      font-weight: 700;
+      font-size: 1rem;
+      background: linear-gradient(90deg, var(--blue), var(--purple));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-decoration: none;
+    }
+    .nav-links {
+      display: flex;
+      gap: 20px;
+      list-style: none;
+      flex-wrap: wrap;
+    }
+    .nav-links a {
+      font-size: 0.82rem;
+      font-weight: 500;
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--blue); }
+    .nav-links a.active { color: var(--blue); font-weight: 600; }
+
+    /* ── Page wrapper ── */
+    .page {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+    }
+
+    /* ── Page Header ── */
+    .page-header {
+      margin-bottom: 40px;
+    }
+    .page-header .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.82rem;
+      font-weight: 500;
+      color: var(--blue);
+      text-decoration: none;
+      margin-bottom: 20px;
+      transition: opacity 0.2s;
+    }
+    .page-header .back-link:hover { opacity: 0.75; }
+    .page-header h1 {
+      font-size: clamp(1.7rem, 4vw, 2.4rem);
+      font-weight: 800;
+      background: linear-gradient(90deg, var(--blue), var(--purple));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1.25;
+      margin-bottom: 8px;
+    }
+    .page-header .meta {
+      font-size: 0.82rem;
+      color: var(--muted);
+    }
+
+    /* ── Cards ── */
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius);
+      padding: 28px 28px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 12px rgba(77,182,255,0.06);
+    }
+
+    /* ── Section heading ── */
+    .card h2 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      background: linear-gradient(90deg, var(--blue), var(--purple));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .card h2 .num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 26px;
+      height: 26px;
+      border-radius: 8px;
+      background: linear-gradient(135deg, var(--blue), var(--purple));
+      color: #fff;
+      font-size: 0.72rem;
+      font-weight: 700;
+      flex-shrink: 0;
+      -webkit-text-fill-color: #fff;
+    }
+
+    /* ── Body text ── */
+    .card p {
+      font-size: 0.92rem;
+      color: var(--dark);
+      margin-bottom: 12px;
+    }
+    .card p:last-child { margin-bottom: 0; }
+
+    /* ── Lists ── */
+    .card ul, .card ol {
+      margin: 10px 0 12px 0;
+      padding-left: 0;
+      list-style: none;
+    }
+    .card ul li, .card ol li {
+      font-size: 0.92rem;
+      color: var(--dark);
+      padding: 4px 0 4px 22px;
+      position: relative;
+    }
+    .card ul li::before {
+      content: '●';
+      color: var(--blue);
+      font-size: 0.6rem;
+      position: absolute;
+      left: 4px;
+      top: 7px;
+    }
+    .card ol {
+      counter-reset: ol-counter;
+    }
+    .card ol li {
+      counter-increment: ol-counter;
+    }
+    .card ol li::before {
+      content: counter(ol-counter) '.';
+      color: var(--blue);
+      font-size: 0.82rem;
+      font-weight: 600;
+      position: absolute;
+      left: 0;
+      top: 4px;
+    }
+
+    /* ── Highlight box ── */
+    .highlight-box {
+      background: linear-gradient(135deg, rgba(77,182,255,0.08), rgba(168,127,255,0.08));
+      border: 1px solid rgba(77,182,255,0.2);
+      border-radius: 10px;
+      padding: 14px 18px;
+      margin: 12px 0;
+      font-size: 0.9rem;
+    }
+    .highlight-box strong { color: var(--blue); }
+
+    /* ── Warning box ── */
+    .warning-box {
+      background: rgba(255,107,107,0.07);
+      border: 1px solid rgba(255,107,107,0.25);
+      border-radius: 10px;
+      padding: 14px 18px;
+      margin: 12px 0;
+      font-size: 0.9rem;
+    }
+    .warning-box strong { color: var(--red); }
+
+    /* ── Contact box ── */
+    .contact-box {
+      background: linear-gradient(135deg, rgba(255,204,2,0.12), rgba(255,140,66,0.12));
+      border: 1.5px solid rgba(255,140,66,0.3);
+      border-radius: var(--radius);
+      padding: 24px 28px;
+      margin-top: 8px;
+    }
+    .contact-box p { margin-bottom: 8px; font-size: 0.9rem; }
+    .contact-box a {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: linear-gradient(90deg, var(--gold), var(--orange));
+      color: var(--dark);
+      font-weight: 700;
+      font-size: 0.9rem;
+      padding: 10px 22px;
+      border-radius: 999px;
+      text-decoration: none;
+      margin-top: 6px;
+      transition: opacity 0.2s, transform 0.2s;
+    }
+    .contact-box a:hover { opacity: 0.88; transform: translateY(-1px); }
+
+    /* ── External link ── */
+    .ext-link {
+      color: var(--blue);
+      font-weight: 500;
+      text-decoration: none;
+      border-bottom: 1px solid rgba(77,182,255,0.3);
+      transition: border-color 0.2s;
+    }
+    .ext-link:hover { border-color: var(--blue); }
+
+    /* ── Footer ── */
+    footer {
+      text-align: center;
+      padding: 32px 24px;
+      font-size: 0.8rem;
+      color: var(--muted);
+      border-top: 1px solid var(--card-border);
+      margin-top: 16px;
+    }
+    footer strong { color: var(--dark); }
+
+    @media (max-width: 500px) {
+      .card { padding: 20px 18px; }
+      .page-header h1 { font-size: 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="site-nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-brand">🏗️ Towerific</a>
+      <ul class="nav-links">
+        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+        <li><a href="terms-and-conditions.html" class="active">Terms &amp; Conditions</a></li>
+        <li><a href="support.html">Support</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="page">
+
+    <!-- Page Header -->
+    <header class="page-header">
+      <a href="index.html" class="back-link">← Back to Legal Home</a>
+      <h1>Terms &amp; Conditions</h1>
+      <p class="meta">App: Towerific — Tower Stack Rush &nbsp;·&nbsp; Developer: Shayona &nbsp;·&nbsp; Last updated: May 7, 2026</p>
+    </header>
+
+    <!-- 1. Acceptance of Terms -->
+    <div class="card">
+      <h2><span class="num">1</span> Acceptance of Terms</h2>
+      <p>These Terms and Conditions ("Terms") govern your access to and use of <strong>Towerific — Tower Stack Rush</strong> (the "Game"), a mobile application developed and published by <strong>Shayona</strong> ("we", "us", or "our"). By downloading, installing, or playing the Game, you agree to be bound by these Terms in full.</p>
+      <p>If you do not agree with any part of these Terms, you must not download or play the Game. Please also review our <a href="privacy-policy.html" class="ext-link">Privacy Policy</a>, which is incorporated by reference into these Terms and describes how we handle data.</p>
+      <p>These Terms may be updated from time to time. Continued use of the Game after changes are posted constitutes your acceptance of the revised Terms.</p>
+      <div class="highlight-box">
+        <strong>Please read these Terms carefully.</strong> They contain important information about your rights, your responsibilities, and the limitations of our liability.
+      </div>
+    </div>
+
+    <!-- 2. About the Game -->
+    <div class="card">
+      <h2><span class="num">2</span> About the Game</h2>
+      <p><strong>Towerific — Tower Stack Rush</strong> is a hyper-casual, free-to-play mobile game available exclusively on <strong>iOS for iPhone</strong> via the Apple App Store. The objective of the Game is to stack coloured blocks as high as possible to build a tower, testing your timing and precision.</p>
+      <p>Key features of the Game include:</p>
+      <ul>
+        <li>Endless hyper-casual tower stacking gameplay</li>
+        <li>A daily streak and reward system to encourage regular play</li>
+        <li>An XP and levelling system</li>
+        <li>In-game coins earned through play or purchasable via the App Store</li>
+        <li>Power-ups purchasable with coins</li>
+        <li>Display advertisements served by Google AdMob</li>
+      </ul>
+      <p>The Game is available free of charge. Optional in-app purchases are available to enhance your experience. No purchase is required to enjoy the core gameplay.</p>
+    </div>
+
+    <!-- 3. License -->
+    <div class="card">
+      <h2><span class="num">3</span> License to Play</h2>
+      <p>Subject to your compliance with these Terms, Shayona grants you a limited, non-exclusive, non-transferable, non-sublicensable, revocable licence to download and play the Game for your own <strong>personal, non-commercial entertainment purposes</strong> on any iPhone device that you own or control.</p>
+      <p>This licence does <strong>not</strong> permit you to:</p>
+      <ul>
+        <li>Use the Game for any commercial purpose or for any public display</li>
+        <li>Distribute, sell, resell, sublicense, or transfer the Game or access to it</li>
+        <li>Modify, adapt, translate, or create derivative works based on the Game</li>
+        <li>Decompile, disassemble, reverse engineer, or otherwise attempt to derive the source code of the Game</li>
+        <li>Remove or alter any copyright, trademark, or other proprietary notices within the Game</li>
+        <li>Use automated tools, bots, or scripts to interact with the Game</li>
+      </ul>
+      <p>This licence is effective until terminated by you or by us. It terminates automatically if you fail to comply with these Terms. Upon termination, you must cease all use of the Game and delete it from your devices.</p>
+    </div>
+
+    <!-- 4. In-App Purchases -->
+    <div class="card">
+      <h2><span class="num">4</span> In-App Purchases</h2>
+      <p>Towerific offers optional in-app purchases of in-game coins. These coin packs are <strong>consumable</strong> virtual items — they are spent within the Game on power-ups and other in-game content and are not recoverable once used.</p>
+      <p><strong>Purchase terms:</strong></p>
+      <ul>
+        <li>All in-app purchases are processed exclusively by <strong>Apple App Store</strong> through Apple's StoreKit framework.</li>
+        <li>Prices are displayed in your local currency and are subject to applicable taxes as determined by Apple.</li>
+        <li>By completing a purchase, you authorise Apple to charge the payment method associated with your Apple ID.</li>
+        <li>Coins are credited to your in-game balance immediately upon successful purchase confirmation from Apple.</li>
+        <li>Coins are stored locally on your device. Uninstalling the Game will result in permanent loss of unused coin balance. We are not responsible for loss of in-game currency due to uninstallation, device loss, or data reset.</li>
+      </ul>
+      <p><strong>No refund policy:</strong> All purchases are final and non-refundable except where required by Apple's policies or by applicable consumer protection law. Shayona does not independently process refunds.</p>
+      <p><strong>Refund requests:</strong> To request a refund, contact Apple directly through <a href="https://reportaproblem.apple.com" target="_blank" rel="noopener noreferrer" class="ext-link">reportaproblem.apple.com</a>. Refunds are granted at Apple's sole discretion.</p>
+      <p><strong>Financial information:</strong> Shayona never receives, stores, or processes your payment card details, Apple ID credentials, or any other financial information. All such data is handled exclusively by Apple.</p>
+      <div class="warning-box">
+        <strong>Note:</strong> In-game coins are virtual items with no monetary value outside the Game. They cannot be transferred between players, exchanged for cash, or carried over to future versions of the Game.
+      </div>
+    </div>
+
+    <!-- 5. Prohibited Conduct -->
+    <div class="card">
+      <h2><span class="num">5</span> Prohibited Conduct</h2>
+      <p>You agree not to engage in any of the following prohibited activities when using the Game:</p>
+      <ul>
+        <li><strong>Cheating:</strong> Using cheat codes, exploits, automation software, bots, hacks, mods, or any other unauthorised third-party software designed to modify or interfere with the Game.</li>
+        <li><strong>Exploitation of bugs:</strong> Deliberately exploiting any bug, glitch, or unintended game mechanic for personal advantage, particularly in ways that affect scores or coin balances.</li>
+        <li><strong>Reverse engineering:</strong> Attempting to reverse engineer, decompile, disassemble, or otherwise derive the source code or underlying algorithms of the Game.</li>
+        <li><strong>Fraudulent purchases:</strong> Attempting to make fraudulent in-app purchases, charge-backs, or abuse Apple's refund policies.</li>
+        <li><strong>Circumventing monetisation:</strong> Using ad-blockers, VPNs, or other tools to bypass or block advertisements in a manner that violates these Terms.</li>
+        <li><strong>Unlawful use:</strong> Using the Game in any way that violates applicable local, national, or international laws or regulations.</li>
+        <li><strong>Interference:</strong> Taking any action that disrupts, impairs, or interferes with the proper operation of the Game or its associated systems.</li>
+      </ul>
+      <p>Violation of these prohibitions may result in immediate termination of your licence to use the Game and, where applicable, may be reported to relevant authorities.</p>
+    </div>
+
+    <!-- 6. Intellectual Property -->
+    <div class="card">
+      <h2><span class="num">6</span> Intellectual Property</h2>
+      <p>All content within the Game — including but not limited to the game code, design, artwork, graphics, animations, user interface, audio, music, sound effects, gameplay mechanics, game logic, brand name, logo, and any other creative elements — is the exclusive intellectual property of <strong>Shayona</strong> and is protected by applicable copyright, trademark, and other intellectual property laws.</p>
+      <p>You acknowledge that:</p>
+      <ul>
+        <li>No rights to intellectual property are transferred to you by downloading or playing the Game.</li>
+        <li>The licence granted in Section 3 does not include the right to copy, reproduce, distribute, display, or create derivative works from any Game content.</li>
+        <li>The name "Towerific", the "Towerific — Tower Stack Rush" brand, and any associated logos or marks are proprietary to Shayona.</li>
+        <li>Any feedback, suggestions, or ideas you share about the Game may be used by Shayona without obligation or compensation to you.</li>
+      </ul>
+      <p>Any unauthorised use of our intellectual property is a violation of these Terms and applicable law, and we reserve all rights to seek remedies.</p>
+    </div>
+
+    <!-- 7. Disclaimers -->
+    <div class="card">
+      <h2><span class="num">7</span> Disclaimers</h2>
+      <p>The Game is provided on an <strong>"as is"</strong> and <strong>"as available"</strong> basis without any warranties of any kind, either express or implied, to the fullest extent permitted by applicable law. Shayona expressly disclaims all warranties, including but not limited to:</p>
+      <ul>
+        <li>Implied warranties of merchantability, fitness for a particular purpose, and non-infringement</li>
+        <li>Warranties that the Game will be uninterrupted, error-free, or free of viruses or other harmful components</li>
+        <li>Warranties regarding the accuracy, reliability, or completeness of any content within the Game</li>
+        <li>Warranties that defects will be corrected</li>
+      </ul>
+      <p>We do not guarantee that the Game will always be available, updated, or compatible with future iOS versions or device models. We reserve the right to modify, suspend, or discontinue the Game (or any feature thereof) at any time, with or without notice, and without liability to you.</p>
+      <p>Nothing in these Terms shall affect any statutory rights you may have as a consumer that cannot be excluded or waived under applicable law.</p>
+    </div>
+
+    <!-- 8. Limitation of Liability -->
+    <div class="card">
+      <h2><span class="num">8</span> Limitation of Liability</h2>
+      <p>To the fullest extent permitted by applicable law, Shayona and its officers, directors, employees, agents, and affiliates shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising out of or related to your use of or inability to use the Game.</p>
+      <p>This includes, without limitation:</p>
+      <ul>
+        <li>Loss of in-game progress, coins, streaks, or other game data</li>
+        <li>Loss of data due to device malfunction, iOS update, or app reinstallation</li>
+        <li>Any harm arising from third-party advertisements served by AdMob</li>
+        <li>Any loss or damage arising from your reliance on the Game's content</li>
+        <li>Any disruption of service or unavailability of the Game</li>
+      </ul>
+      <p>Where liability cannot be fully excluded by law, our total liability to you shall not exceed the greater of (a) the amount you paid to us (if any) in the 12 months preceding the claim, or (b) the equivalent of USD $10.</p>
+      <p>Some jurisdictions do not allow the exclusion or limitation of certain warranties or liabilities, so the above limitations may not apply to you in full.</p>
+    </div>
+
+    <!-- 9. Advertising -->
+    <div class="card">
+      <h2><span class="num">9</span> Advertising</h2>
+      <p>The Game contains display advertisements served by <strong>Google AdMob</strong>. These ads help us offer the Game free of charge to all players.</p>
+      <p>By using the Game, you acknowledge that:</p>
+      <ul>
+        <li>Advertisements will appear during normal gameplay (e.g., between game sessions or on specific screens).</li>
+        <li>The content of advertisements is determined by Google AdMob and is outside our control.</li>
+        <li>We are not responsible for the accuracy, appropriateness, legality, or content of any third-party advertisements.</li>
+        <li>Clicking on an advertisement will take you to a third-party website or app, governed by that third party's terms and privacy policy. We have no responsibility for third-party destinations.</li>
+      </ul>
+      <p>If you encounter an advertisement you believe is inappropriate, harmful, or in violation of applicable regulations, please contact us using the details in Section 13 and we will escalate the matter to Google AdMob.</p>
+      <p>Ad personalisation is governed by your App Tracking Transparency (ATT) consent — see our <a href="privacy-policy.html" class="ext-link">Privacy Policy</a> for details.</p>
+    </div>
+
+    <!-- 10. Termination -->
+    <div class="card">
+      <h2><span class="num">10</span> Termination</h2>
+      <p>We reserve the right to terminate or suspend your access to the Game, at our sole discretion, with or without notice and without liability, for any of the following reasons:</p>
+      <ul>
+        <li>Violation of any provision of these Terms</li>
+        <li>Conduct that we reasonably believe is harmful to other users, us, or third parties</li>
+        <li>Engaging in any of the prohibited conduct described in Section 5</li>
+        <li>Fraudulent, illegal, or abusive behaviour in connection with the Game or its purchasing systems</li>
+        <li>If we decide to discontinue the Game</li>
+      </ul>
+      <p>Upon termination, your licence to use the Game ceases immediately. You remain bound by the provisions of these Terms that by their nature survive termination, including Sections 6 (Intellectual Property), 7 (Disclaimers), and 8 (Limitation of Liability).</p>
+      <p>You may stop using the Game at any time by deleting it from your device.</p>
+    </div>
+
+    <!-- 11. Governing Law -->
+    <div class="card">
+      <h2><span class="num">11</span> Governing Law</h2>
+      <p>These Terms shall be governed by and construed in accordance with the laws of <strong>India</strong>, without regard to its conflict of law principles.</p>
+      <p>Any dispute arising out of or in connection with these Terms, including any question regarding their existence, validity, or termination, shall be subject to the exclusive jurisdiction of the courts of India.</p>
+      <p>If you are a consumer in a jurisdiction with mandatory consumer protection laws that provide you with greater rights, those laws may apply to you in addition to or in lieu of the above.</p>
+    </div>
+
+    <!-- 12. Changes to Terms -->
+    <div class="card">
+      <h2><span class="num">12</span> Changes to These Terms</h2>
+      <p>We may modify these Terms at any time. When we make material changes, we will update the "Last updated" date at the top of this page. Changes may also be noted in the App Store release notes for the relevant app update.</p>
+      <p>Your continued use of the Game after changes are posted constitutes your acceptance of the revised Terms. If you do not agree to the new Terms, you must stop using and uninstall the Game.</p>
+      <p>We encourage you to review these Terms periodically to stay informed of any updates.</p>
+    </div>
+
+    <!-- 13. Contact Us -->
+    <div class="card">
+      <h2><span class="num">13</span> Contact Us</h2>
+      <p>If you have any questions, concerns, or feedback about these Terms and Conditions, please reach out to us. We are happy to clarify anything.</p>
+      <div class="contact-box">
+        <p><strong>Shayona</strong> — Towerific — Tower Stack Rush</p>
+        <p>Bundle ID: com.shayona.towerific</p>
+        <p>Platform: iOS (iPhone)</p>
+        <a href="mailto:harigo1234@gmail.com">✉ harigo1234@gmail.com</a>
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    <p>&copy; 2026 <strong>Shayona</strong>. Towerific — Tower Stack Rush. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

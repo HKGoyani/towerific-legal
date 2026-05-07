@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Support — Towerific</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg-start: #EAF4FF;
+      --bg-mid: #F0EEFF;
+      --bg-end: #FFF0F8;
+      --blue: #4DB6FF;
+      --purple: #A87FFF;
+      --gold: #FFCC02;
+      --orange: #FF8C42;
+      --red: #FF6B6B;
+      --green: #5CC85C;
+      --dark: #1A1040;
+      --muted: rgba(26,16,64,0.55);
+      --card-bg: #FFFFFF;
+      --card-border: rgba(26,16,64,0.08);
+      --radius: 16px;
+      --max-w: 760px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, var(--bg-start) 0%, var(--bg-mid) 50%, var(--bg-end) 100%);
+      min-height: 100vh;
+      color: var(--dark);
+      line-height: 1.75;
+    }
+
+    /* ── Navigation ── */
+    .site-nav {
+      background: rgba(255,255,255,0.85);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--card-border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .nav-inner {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 12px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .nav-brand {
+      font-weight: 700;
+      font-size: 1rem;
+      background: linear-gradient(90deg, var(--blue), var(--purple));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-decoration: none;
+    }
+    .nav-links {
+      display: flex;
+      gap: 20px;
+      list-style: none;
+      flex-wrap: wrap;
+    }
+    .nav-links a {
+      font-size: 0.82rem;
+      font-weight: 500;
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--blue); }
+    .nav-links a.active { color: var(--blue); font-weight: 600; }
+
+    /* ── Page wrapper ── */
+    .page {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+    }
+
+    /* ── Page Header ── */
+    .page-header {
+      margin-bottom: 40px;
+    }
+    .page-header .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.82rem;
+      font-weight: 500;
+      color: var(--blue);
+      text-decoration: none;
+      margin-bottom: 20px;
+      transition: opacity 0.2s;
+    }
+    .page-header .back-link:hover { opacity: 0.75; }
+
+    .support-hero {
+      text-align: center;
+      padding: 24px 0 8px;
+    }
+    .support-hero .icon {
+      font-size: 3rem;
+      display: block;
+      margin-bottom: 12px;
+      line-height: 1;
+    }
+    .support-hero h1 {
+      font-size: clamp(1.7rem, 4vw, 2.4rem);
+      font-weight: 800;
+      background: linear-gradient(90deg, var(--blue), var(--purple));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1.25;
+      margin-bottom: 10px;
+    }
+    .support-hero p {
+      font-size: 1rem;
+      color: var(--muted);
+      max-width: 480px;
+      margin: 0 auto;
+    }
+
+    /* ── Section label ── */
+    .section-label {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin: 40px 0 14px;
+    }
+
+    /* ── FAQ cards ── */
+    .faq-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius);
+      margin-bottom: 14px;
+      box-shadow: 0 2px 12px rgba(77,182,255,0.05);
+      overflow: hidden;
+    }
+
+    .faq-question {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      padding: 20px 24px;
+      cursor: pointer;
+      user-select: none;
+      list-style: none;
+      transition: background 0.15s;
+    }
+    .faq-question:hover {
+      background: rgba(77,182,255,0.04);
+    }
+    .faq-question::-webkit-details-marker { display: none; }
+    .faq-question::marker { display: none; }
+
+    .faq-q-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, var(--blue), var(--purple));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    .faq-q-text {
+      flex: 1;
+    }
+    .faq-q-text strong {
+      display: block;
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--dark);
+      line-height: 1.4;
+    }
+
+    .faq-toggle {
+      margin-left: auto;
+      color: var(--blue);
+      font-size: 1.1rem;
+      font-weight: 700;
+      flex-shrink: 0;
+      transition: transform 0.2s;
+      line-height: 1;
+      padding-top: 2px;
+    }
+
+    details[open] .faq-toggle {
+      transform: rotate(45deg);
+    }
+
+    .faq-answer {
+      padding: 0 24px 20px 74px;
+      font-size: 0.9rem;
+      color: var(--dark);
+      line-height: 1.7;
+      border-top: 1px solid var(--card-border);
+      padding-top: 14px;
+    }
+    .faq-answer p { margin-bottom: 8px; }
+    .faq-answer p:last-child { margin-bottom: 0; }
+    .faq-answer ul {
+      list-style: none;
+      margin: 8px 0;
+      padding: 0;
+    }
+    .faq-answer ul li {
+      padding: 3px 0 3px 20px;
+      position: relative;
+      font-size: 0.9rem;
+    }
+    .faq-answer ul li::before {
+      content: '●';
+      color: var(--blue);
+      font-size: 0.55rem;
+      position: absolute;
+      left: 4px;
+      top: 7px;
+    }
+
+    .faq-answer .tip-box {
+      background: linear-gradient(135deg, rgba(77,182,255,0.08), rgba(168,127,255,0.08));
+      border: 1px solid rgba(77,182,255,0.2);
+      border-radius: 10px;
+      padding: 12px 16px;
+      margin-top: 10px;
+      font-size: 0.88rem;
+    }
+    .faq-answer .tip-box strong { color: var(--blue); }
+
+    /* ── Step indicators ── */
+    .steps {
+      margin: 10px 0;
+      padding: 0;
+      list-style: none;
+      counter-reset: step-counter;
+    }
+    .steps li {
+      counter-increment: step-counter;
+      padding: 5px 0 5px 32px;
+      position: relative;
+      font-size: 0.9rem;
+    }
+    .steps li::before {
+      content: counter(step-counter);
+      width: 22px;
+      height: 22px;
+      background: linear-gradient(135deg, var(--blue), var(--purple));
+      color: #fff;
+      border-radius: 50%;
+      font-size: 0.72rem;
+      font-weight: 700;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      left: 0;
+      top: 6px;
+    }
+
+    /* ── Contact section ── */
+    .contact-section {
+      margin-top: 48px;
+    }
+
+    .contact-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius);
+      padding: 36px 28px;
+      text-align: center;
+      box-shadow: 0 2px 16px rgba(77,182,255,0.07);
+    }
+    .contact-card .contact-icon {
+      font-size: 2.5rem;
+      display: block;
+      margin-bottom: 12px;
+      line-height: 1;
+    }
+    .contact-card h2 {
+      font-size: 1.3rem;
+      font-weight: 700;
+      background: linear-gradient(90deg, var(--blue), var(--purple));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 10px;
+    }
+    .contact-card p {
+      font-size: 0.9rem;
+      color: var(--muted);
+      max-width: 420px;
+      margin: 0 auto 20px;
+    }
+
+    .contact-box {
+      background: linear-gradient(135deg, rgba(255,204,2,0.12), rgba(255,140,66,0.12));
+      border: 1.5px solid rgba(255,140,66,0.3);
+      border-radius: var(--radius);
+      padding: 24px 28px;
+      margin: 0 auto;
+      max-width: 400px;
+      text-align: left;
+    }
+    .contact-box p { margin-bottom: 6px; font-size: 0.9rem; }
+    .contact-box .email-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: linear-gradient(90deg, var(--gold), var(--orange));
+      color: var(--dark);
+      font-weight: 700;
+      font-size: 0.9rem;
+      padding: 12px 26px;
+      border-radius: 999px;
+      text-decoration: none;
+      margin-top: 12px;
+      transition: opacity 0.2s, transform 0.2s;
+      width: 100%;
+      justify-content: center;
+    }
+    .contact-box .email-btn:hover { opacity: 0.88; transform: translateY(-2px); }
+
+    .response-note {
+      margin-top: 16px;
+      font-size: 0.82rem;
+      color: var(--muted);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+    }
+    .response-note::before {
+      content: '⏱';
+      font-size: 0.9rem;
+    }
+
+    /* ── External link ── */
+    .ext-link {
+      color: var(--blue);
+      font-weight: 500;
+      text-decoration: none;
+      border-bottom: 1px solid rgba(77,182,255,0.3);
+      transition: border-color 0.2s;
+    }
+    .ext-link:hover { border-color: var(--blue); }
+
+    /* ── Footer ── */
+    footer {
+      text-align: center;
+      padding: 32px 24px;
+      font-size: 0.8rem;
+      color: var(--muted);
+      border-top: 1px solid var(--card-border);
+      margin-top: 40px;
+    }
+    footer strong { color: var(--dark); }
+
+    @media (max-width: 500px) {
+      .faq-answer { padding-left: 24px; }
+      .contact-card { padding: 24px 18px; }
+      .contact-box { padding: 18px 18px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="site-nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-brand">🏗️ Towerific</a>
+      <ul class="nav-links">
+        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+        <li><a href="terms-and-conditions.html">Terms &amp; Conditions</a></li>
+        <li><a href="support.html" class="active">Support</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="page">
+
+    <!-- Page Header -->
+    <header class="page-header">
+      <a href="index.html" class="back-link">← Back to Legal Home</a>
+
+      <!-- Support Hero -->
+      <div class="support-hero">
+        <span class="icon">💬</span>
+        <h1>Support</h1>
+        <p>How can we help? Browse frequently asked questions below, or send us a message.</p>
+      </div>
+    </header>
+
+    <!-- FAQ Section -->
+    <p class="section-label">Frequently Asked Questions</p>
+
+    <!-- FAQ 1 -->
+    <details class="faq-card">
+      <summary class="faq-question">
+        <div class="faq-q-icon">🪙</div>
+        <div class="faq-q-text">
+          <strong>My coins disappeared after reinstalling the app</strong>
+        </div>
+        <span class="faq-toggle">+</span>
+      </summary>
+      <div class="faq-answer">
+        <p>We're sorry to hear that! Unfortunately, all in-game data in Towerific — including your coin balance, high score, level, and streak — is stored <strong>locally on your iPhone</strong>. This means it is not backed up to any cloud service or server.</p>
+        <p>When you uninstall and reinstall the app, the local data is permanently deleted by iOS as part of the uninstall process. We have no way to recover it on our end.</p>
+        <div class="tip-box">
+          <strong>Tip:</strong> To avoid losing your coins, make sure to keep the app installed and avoid uninstalling unless necessary. If you purchased coins through the App Store, please see the FAQ below about restoring purchases.
+        </div>
+      </div>
+    </details>
+
+    <!-- FAQ 2 -->
+    <details class="faq-card">
+      <summary class="faq-question">
+        <div class="faq-q-icon">🛒</div>
+        <div class="faq-q-text">
+          <strong>How do I restore my purchases?</strong>
+        </div>
+        <span class="faq-toggle">+</span>
+      </summary>
+      <div class="faq-answer">
+        <p>If you've previously purchased coin packs and want to restore them on a new device or after reinstalling, you can attempt a restore through the in-game settings:</p>
+        <ol class="steps">
+          <li>Open Towerific on your iPhone.</li>
+          <li>Tap the <strong>Settings</strong> icon (gear icon) on the main menu screen.</li>
+          <li>Scroll down and tap <strong>Restore Purchases</strong>.</li>
+          <li>A prompt from Apple may appear asking you to sign in to your Apple ID — follow the on-screen instructions.</li>
+        </ol>
+        <p>Please note that Towerific's coin packs are <strong>consumable</strong> items. This means they are one-time-use purchases. Once coins have been spent in-game, they cannot be restored via this method — only unspent/unused coin packs may be eligible for restoration, depending on Apple's policies.</p>
+        <p>If you have further issues with purchases, please contact Apple directly at <a href="https://reportaproblem.apple.com" target="_blank" rel="noopener noreferrer" class="ext-link">reportaproblem.apple.com</a>.</p>
+      </div>
+    </details>
+
+    <!-- FAQ 3 -->
+    <details class="faq-card">
+      <summary class="faq-question">
+        <div class="faq-q-icon">📺</div>
+        <div class="faq-q-text">
+          <strong>An ad is not working or the screen is frozen</strong>
+        </div>
+        <span class="faq-toggle">+</span>
+      </summary>
+      <div class="faq-answer">
+        <p>Occasionally, an advertisement may fail to load, become unresponsive, or cause the screen to appear frozen. This is usually caused by a temporary network issue or an ad loading error from the ad provider (Google AdMob).</p>
+        <p>Here's what to try:</p>
+        <ul>
+          <li><strong>Close and reopen the app:</strong> Double-press the Home button (or swipe up and hold on Face ID iPhones) to see open apps, then swipe up on Towerific to close it. Relaunch the app from your home screen.</li>
+          <li><strong>Check your internet connection:</strong> Ads require an active internet connection to load. Make sure you are connected to Wi-Fi or mobile data.</li>
+          <li><strong>Restart your iPhone:</strong> If the issue persists, restarting your device often resolves temporary glitches.</li>
+        </ul>
+        <p>If you continue to experience frozen ads regularly, please contact us with details about your device model and iOS version — we'll report it to Google AdMob.</p>
+      </div>
+    </details>
+
+    <!-- FAQ 4 -->
+    <details class="faq-card">
+      <summary class="faq-question">
+        <div class="faq-q-icon">🚫</div>
+        <div class="faq-q-text">
+          <strong>How do I turn off ads?</strong>
+        </div>
+        <span class="faq-toggle">+</span>
+      </summary>
+      <div class="faq-answer">
+        <p>Advertisements are how we keep Towerific free to play for everyone. Without ad revenue, we would not be able to maintain and improve the game.</p>
+        <p>In the <strong>current version (v1)</strong> of Towerific, there is <strong>no option to remove ads</strong> — either as a separate purchase or as part of any coin pack. Ads will appear between game sessions as part of the standard gameplay experience.</p>
+        <div class="tip-box">
+          <strong>Future update:</strong> We are considering a "Remove Ads" option in a future update. Stay tuned to our App Store page for news on upcoming features.
+        </div>
+        <p>You can control whether ads are <strong>personalised</strong> by managing your tracking settings. Go to <strong>Settings → Privacy &amp; Security → Tracking</strong> and toggle Towerific on or off. This does not remove ads but controls whether they are tailored to your interests.</p>
+      </div>
+    </details>
+
+    <!-- FAQ 5 -->
+    <details class="faq-card">
+      <summary class="faq-question">
+        <div class="faq-q-icon">⚡</div>
+        <div class="faq-q-text">
+          <strong>What are power-ups and how do I use them?</strong>
+        </div>
+        <span class="faq-toggle">+</span>
+      </summary>
+      <div class="faq-answer">
+        <p>Power-ups are special in-game boosters that can give you an advantage during gameplay. They are purchased using <strong>coins</strong> — which you can earn by playing or buy through in-app purchases.</p>
+        <p>Power-ups available in Towerific include helpful tools to extend your tower, correct misaligned blocks, or gain extra chances when the game would otherwise end. Specific power-up details and effects are shown within the game UI before purchase.</p>
+        <p><strong>How to use a power-up:</strong></p>
+        <ol class="steps">
+          <li>During a game session, look for the power-up tray on the game screen.</li>
+          <li>Tap a power-up icon to activate it (it will deduct the coin cost).</li>
+          <li>The power-up effect is applied immediately to your current game.</li>
+        </ol>
+        <p>Power-ups are consumable — each use deducts from your coin balance. They do not carry over between sessions once used.</p>
+      </div>
+    </details>
+
+    <!-- FAQ 6 -->
+    <details class="faq-card">
+      <summary class="faq-question">
+        <div class="faq-q-icon">🔥</div>
+        <div class="faq-q-text">
+          <strong>How does the daily streak work?</strong>
+        </div>
+        <span class="faq-toggle">+</span>
+      </summary>
+      <div class="faq-answer">
+        <p>The <strong>daily streak</strong> tracks how many consecutive days you have opened and played Towerific. It rewards you for building a consistent play habit!</p>
+        <p><strong>How it works:</strong></p>
+        <ul>
+          <li>Open the game and play at least one round each day to keep your streak alive.</li>
+          <li>Each new day you play, your streak counter increases by 1.</li>
+          <li>If you miss a day (i.e., you do not play within a 24-hour window), your streak resets to zero.</li>
+          <li>Longer streaks unlock bigger daily rewards, including bonus coins.</li>
+        </ul>
+        <div class="tip-box">
+          <strong>Tip:</strong> The streak resets based on calendar days. Try to log in at roughly the same time each day to make sure you don't accidentally miss a day.
+        </div>
+        <p>Streak progress is saved locally on your device. If you reinstall the app, your streak will be lost along with other local data — see the coins FAQ above for more details.</p>
+      </div>
+    </details>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+      <p class="section-label">Still need help?</p>
+
+      <div class="contact-card">
+        <span class="contact-icon">✉️</span>
+        <h2>Contact Us</h2>
+        <p>Can't find what you're looking for? Send us an email and our team will get back to you as soon as possible.</p>
+
+        <div class="contact-box">
+          <p><strong>Shayona</strong> — Towerific Support</p>
+          <p>Bundle ID: com.shayona.towerific</p>
+          <p>Platform: iOS (iPhone)</p>
+          <a href="mailto:harigo1234@gmail.com?subject=Towerific%20Support%20Request" class="email-btn">
+            ✉ harigo1234@gmail.com
+          </a>
+        </div>
+
+        <p class="response-note">We typically respond within 24–48 hours.</p>
+      </div>
+    </section>
+
+  </div>
+
+  <footer>
+    <p>&copy; 2026 <strong>Shayona</strong>. Towerific — Tower Stack Rush. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
