@@ -164,8 +164,22 @@
       box-shadow: 0 8px 32px rgba(77,182,255,0.18);
     }
     .card-icon {
-      font-size: 2rem;
+      width: 52px;
+      height: 52px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, var(--blue), var(--purple));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 1.15rem;
+      font-weight: 800;
       line-height: 1;
+      letter-spacing: -0.02em;
+    }
+    .card-icon-gold {
+      background: linear-gradient(135deg, var(--gold), var(--orange));
+      color: var(--dark);
     }
     .card-title {
       font-size: 1.05rem;
@@ -235,7 +249,7 @@
   <!-- Navigation -->
   <nav class="site-nav">
     <div class="nav-inner">
-      <a href="index.html" class="nav-brand">🏗️ Towerific</a>
+      <a href="index.html" class="nav-brand">Towerific</a>
       <ul class="nav-links">
         <li><a href="privacy-policy.html">Privacy Policy</a></li>
         <li><a href="terms-and-conditions.html">Terms &amp; Conditions</a></li>
@@ -264,21 +278,21 @@
     <section class="cards-grid">
 
       <a href="privacy-policy.html" class="legal-card">
-        <div class="card-icon">🔒</div>
+        <div class="card-icon" aria-hidden="true">PP</div>
         <div class="card-title">Privacy Policy</div>
         <div class="card-desc">How we handle your data, advertising (AdMob), app tracking, and in-app purchases.</div>
         <div class="card-link">View <span>→</span></div>
       </a>
 
       <a href="terms-and-conditions.html" class="legal-card">
-        <div class="card-icon">📋</div>
+        <div class="card-icon" aria-hidden="true">T&amp;C</div>
         <div class="card-title">Terms &amp; Conditions</div>
         <div class="card-desc">Rules governing your use of the game, purchases, intellectual property, and liability.</div>
         <div class="card-link">View <span>→</span></div>
       </a>
 
       <a href="support.html" class="legal-card">
-        <div class="card-icon">💬</div>
+        <div class="card-icon card-icon-gold" aria-hidden="true">FAQ</div>
         <div class="card-title">Support</div>
         <div class="card-desc">FAQs about coins, purchases, ads, streaks, and power-ups. Contact us for help.</div>
         <div class="card-link">View <span>→</span></div>
