@@ -283,16 +283,16 @@
     <header class="page-header">
       <a href="index.html" class="back-link">← Back to Legal Home</a>
       <h1>Privacy Policy</h1>
-      <p class="meta">App: Towerific &nbsp;·&nbsp; Developer: Shayona &nbsp;·&nbsp; Last updated: June 12, 2026</p>
+      <p class="meta">App: Towerific &nbsp;·&nbsp; Developer: Shayona &nbsp;·&nbsp; Platforms: iOS &amp; Android &nbsp;·&nbsp; Last updated: June 16, 2026</p>
     </header>
 
     <!-- 1. Overview -->
     <div class="card">
       <h2><span class="num">1</span> Overview</h2>
-      <p>Towerific ("the Game", "we", "our", or "us") is a free-to-play mobile game developed by <strong>Shayona</strong> and published on the Apple App Store for iPhone. We are committed to protecting your privacy.</p>
-      <p>This Privacy Policy explains what information is and is not collected when you play the Game, how advertising is served, and how your in-app purchases are handled. By downloading and playing the Game, you agree to this policy.</p>
+      <p>Towerific ("the Game", "we", "our", or "us") is a free-to-play mobile game developed by <strong>Shayona</strong>, available on the <strong>Apple App Store (iOS)</strong> and <strong>Google Play Store (Android)</strong>. We are committed to protecting your privacy.</p>
+      <p>This Privacy Policy explains what information is and is not collected when you play the Game, how advertising is served, and how your in-app purchases are handled. It applies equally to both the iOS and Android versions. By downloading and playing the Game, you agree to this policy.</p>
       <div class="highlight-box">
-        <strong>In short:</strong> We do not collect any personally identifiable information (PII). All gameplay data is stored only on your device. Ads are served by Google AdMob, which may use your device's advertising identifier (IDFA) with your permission.
+        <strong>In short:</strong> We do not collect any personally identifiable information (PII). All gameplay data is stored only on your device. Ads are served by Google AdMob, which may use your device's advertising identifier (IDFA on iOS / GAID on Android) subject to your consent.
       </div>
     </div>
 
@@ -317,7 +317,7 @@
     <!-- 3. Data Stored on Your Device -->
     <div class="card">
       <h2><span class="num">3</span> Data Stored on Your Device</h2>
-      <p>The Game saves certain gameplay information locally on your iPhone using iOS standard storage (UserDefaults / local file system). This data never leaves your device and is not accessible by us. It includes:</p>
+      <p>The Game saves certain gameplay information locally on your device using platform-standard storage (UserDefaults / local file system on iOS; SharedPreferences / local file system on Android). This data never leaves your device and is not accessible by us. It includes:</p>
       <ul>
         <li><strong>High score</strong> — your best tower height or score achieved</li>
         <li><strong>Coins</strong> — your current in-game coin balance earned or purchased</li>
@@ -334,11 +334,11 @@
     <div class="card">
       <h2><span class="num">4</span> Advertising — Google AdMob</h2>
       <p>The Game is free to play and is supported by advertising. We use <strong>Google AdMob</strong> (a service provided by Google LLC) to serve advertisements within the Game.</p>
-      <p><strong>What AdMob may collect:</strong> Google AdMob may collect and use your device's advertising identifier (IDFA — Identifier for Advertisers), as well as general device and usage information, to serve ads that may be relevant to you. This is only done after you grant permission through the App Tracking Transparency (ATT) prompt (see Section 5).</p>
+      <p><strong>What AdMob may collect:</strong> Google AdMob may collect and use your device's advertising identifier (IDFA on iOS / Google Advertising ID on Android), as well as general device and usage information, to serve ads that may be relevant to you. On iOS this requires your consent via the App Tracking Transparency prompt (see Section 5). On Android, you can opt out via your device's ad settings (see Section 5).</p>
       <p><strong>Personalised vs. non-personalised ads:</strong></p>
       <ul>
-        <li>If you <strong>allow tracking</strong> in the ATT prompt, AdMob may show you personalised ads based on your interests and prior app activity across other companies' apps and websites.</li>
-        <li>If you <strong>decline tracking</strong>, AdMob will only show contextual (non-personalised) ads and your IDFA will not be used for targeted advertising.</li>
+        <li>If you <strong>allow tracking</strong> (iOS) or have not opted out of ad personalisation (Android), AdMob may show you personalised ads based on your interests and prior app activity.</li>
+        <li>If you <strong>decline tracking</strong> (iOS) or opt out of personalised ads (Android), AdMob will only show contextual (non-personalised) ads and your advertising identifier will not be used for targeted advertising.</li>
       </ul>
       <p>Google's data practices are governed by their own privacy policy. You can review it at:</p>
       <ul>
@@ -349,19 +349,27 @@
       <p><strong>Remove Ads purchase:</strong> Users who purchase the "Remove Ads" in-app purchase will no longer see banner, interstitial, or app-open advertisements. <strong>Rewarded ads</strong> (opt-in video ads the player voluntarily watches to earn free coins) remain available regardless of this purchase, as they are a player benefit rather than an interruption. When ads are removed, AdMob is simply not called for those ad types — no additional data is collected.</p>
     </div>
 
-    <!-- 5. App Tracking Transparency -->
+    <!-- 5. Ad Tracking & Consent -->
     <div class="card">
-      <h2><span class="num">5</span> App Tracking Transparency (ATT)</h2>
-      <p>In compliance with Apple's App Tracking Transparency framework (available on iOS 14.5 and later), the Game will present you with a system prompt the first time you launch it. This prompt asks whether you consent to the Game tracking your activity across other companies' apps and websites.</p>
-      <p><strong>If you tap "Allow":</strong> Your IDFA is shared with Google AdMob for the purpose of showing you personalised advertisements. This may result in ads that are more relevant to your interests.</p>
-      <p><strong>If you tap "Ask App Not to Track":</strong> Your IDFA is not shared with AdMob. You will still see ads, but they will be non-personalised (contextual only). The Game's core functionality remains fully available regardless of your choice.</p>
-      <p><strong>Changing your choice later:</strong> You can change your tracking preference at any time by going to:</p>
+      <h2><span class="num">5</span> Ad Tracking &amp; Consent</h2>
+
+      <p><strong>iOS — App Tracking Transparency (ATT)</strong></p>
+      <p>In compliance with Apple's App Tracking Transparency framework (iOS 14.5+), the Game may present you with a system prompt asking whether you consent to tracking your activity across other companies' apps and websites.</p>
       <ul>
-        <li><strong>Settings → Privacy &amp; Security → Tracking</strong>, then toggle Towerific on or off.</li>
-        <li>Alternatively, go to <strong>Settings → Towerific</strong> and adjust the tracking permission there.</li>
+        <li><strong>Allow:</strong> Your IDFA is shared with Google AdMob for personalised ads.</li>
+        <li><strong>Ask App Not to Track:</strong> Your IDFA is not shared. Ads remain but are non-personalised (contextual only).</li>
       </ul>
+      <p>Change your choice anytime: <strong>iOS Settings → Privacy &amp; Security → Tracking → Towerific</strong>.</p>
+
+      <p style="margin-top:14px;"><strong>Android — Google Advertising ID</strong></p>
+      <p>On Android, Google AdMob may use your Google Advertising ID (GAID) to serve personalised ads. You can opt out of ad personalisation at any time:</p>
+      <ul>
+        <li><strong>Android 12+:</strong> Settings → Privacy → Ads → Delete advertising ID (or opt out of personalised ads).</li>
+        <li><strong>Android 11 and below:</strong> Settings → Google → Ads → Opt out of Ads Personalisation.</li>
+      </ul>
+
       <div class="highlight-box">
-        Your choice does not affect your ability to play the Game. All features, including in-app purchases and gameplay, work identically regardless of your ATT decision.
+        Your tracking or ad personalisation choice does not affect your ability to play the Game. All features, including in-app purchases and gameplay, work identically regardless of your decision.
       </div>
     </div>
 
@@ -370,10 +378,12 @@
       <h2><span class="num">6</span> Notifications</h2>
       <p>Towerific can send you local reminder notifications — for example, a nudge to keep your daily streak alive or a heads-up that the weekly leaderboard has reset. The Game will request notification permission via the standard iOS system prompt after you've played a few rounds.</p>
       <p><strong>These notifications are scheduled entirely on your device.</strong> We do not operate a push-notification server, and no data about you or your gameplay is sent anywhere to schedule or deliver them.</p>
+      <p>On Android (13+), the Game will request the POST_NOTIFICATIONS permission the first time you enable reminders. You can grant or revoke this at any time in your device settings.</p>
       <p><strong>Managing notifications:</strong></p>
       <ul>
         <li>Toggle reminders on or off anytime in <strong>Towerific → Settings → Notifications</strong>.</li>
-        <li>Or go to <strong>iOS Settings → Towerific → Notifications</strong> to change or revoke permission at the system level.</li>
+        <li><strong>iOS:</strong> Go to <strong>Settings → Towerific → Notifications</strong> to change or revoke permission.</li>
+        <li><strong>Android:</strong> Go to <strong>Settings → Apps → Towerific → Notifications</strong> to change or revoke permission.</li>
       </ul>
       <div class="highlight-box">
         Notifications are entirely optional. Declining or disabling them does not affect your ability to play the Game or access any feature.
@@ -383,12 +393,20 @@
     <!-- 7. In-App Purchases -->
     <div class="card">
       <h2><span class="num">7</span> In-App Purchases</h2>
-      <p>Towerific offers the following in-app purchases, processed exclusively through Apple App Store:</p>
+      <p>Towerific offers the following in-app purchases, processed by the platform store (Apple App Store on iOS; Google Play Store on Android):</p>
       <p><strong>Consumable coin packs (×6):</strong> Optional coin packs at six price points ($0.99 – $14.99), including a one-time "Welcome Offer" (2,000 coins for $1.99) shown to new players for 24 hours after their first launch. Coins are an in-game virtual currency earned through gameplay or purchased as an optional shortcut. Consumable purchases are spent and cannot be restored once used.</p>
       <p><strong>Non-consumable — Remove Ads ($2.99):</strong> A one-time purchase that permanently removes banner, interstitial, and app-open advertisements. Rewarded ads (opt-in) remain available. As a non-consumable purchase, this entitlement can be restored on a new device or after reinstallation using the <strong>Restore Purchases</strong> button available on the Get Coins screen.</p>
-      <p><strong>Payment processing:</strong> All in-app purchases are processed entirely by <strong>Apple App Store</strong> using <strong>Apple StoreKit</strong>. We, Shayona, never receive, process, or store your payment card details, Apple ID credentials, or any other financial information. Apple's payment policies and data practices apply to all transactions.</p>
-      <p><strong>Receipts and verification:</strong> Apple provides us only with transaction receipt data (purchase confirmation and product ID) to verify that a purchase was made. No personal or financial details are shared with us.</p>
-      <p><strong>Refunds:</strong> Refund requests must be submitted to Apple. You can request a refund through Apple's report-a-problem page at <a href="https://reportaproblem.apple.com" target="_blank" rel="noopener noreferrer" class="ext-link">reportaproblem.apple.com</a>.</p>
+      <p><strong>Payment processing:</strong></p>
+      <ul>
+        <li><strong>iOS:</strong> All purchases are processed entirely by <strong>Apple App Store</strong> using Apple StoreKit. Apple's payment policies and data practices apply.</li>
+        <li><strong>Android:</strong> All purchases are processed entirely by <strong>Google Play Billing</strong>. Google's payment policies and data practices apply.</li>
+      </ul>
+      <p>We, Shayona, never receive, process, or store your payment card details, Apple ID / Google account credentials, or any other financial information.</p>
+      <p><strong>Refunds:</strong></p>
+      <ul>
+        <li><strong>iOS:</strong> Submit refund requests to Apple at <a href="https://reportaproblem.apple.com" target="_blank" rel="noopener noreferrer" class="ext-link">reportaproblem.apple.com</a>.</li>
+        <li><strong>Android:</strong> Submit refund requests through Google Play at <a href="https://play.google.com/store/account/orderhistory" target="_blank" rel="noopener noreferrer" class="ext-link">play.google.com/store/account/orderhistory</a>.</li>
+      </ul>
     </div>
 
     <!-- 8. Third-Party Services -->
@@ -401,11 +419,18 @@
           Privacy Policy: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" class="ext-link">policies.google.com/privacy</a>
         </li>
         <li>
-          <strong>Apple StoreKit</strong> — in-app purchase processing. Provided by Apple Inc.<br />
+          <strong>Apple StoreKit</strong> — in-app purchase processing on iOS. Provided by Apple Inc.<br />
           Privacy Policy: <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener noreferrer" class="ext-link">apple.com/legal/privacy</a>
         </li>
         <li>
-          <strong>Apple App Store</strong> — app distribution, installation, and update delivery. Provided by Apple Inc.
+          <strong>Apple App Store</strong> — app distribution on iOS. Provided by Apple Inc.
+        </li>
+        <li>
+          <strong>Google Play Billing</strong> — in-app purchase processing on Android. Provided by Google LLC.<br />
+          Privacy Policy: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" class="ext-link">policies.google.com/privacy</a>
+        </li>
+        <li>
+          <strong>Google Play Store</strong> — app distribution on Android. Provided by Google LLC.
         </li>
       </ul>
       <p>We are not responsible for the privacy practices of these third-party services. We encourage you to review their respective privacy policies.</p>
@@ -414,18 +439,22 @@
     <!-- 9. Children's Privacy -->
     <div class="card">
       <h2><span class="num">9</span> Children's Privacy</h2>
-      <p>Towerific is a casual tower-stacking game suitable for players of all ages. The Game is rated suitable for all audiences on the Apple App Store.</p>
+      <p>Towerific is a casual tower-stacking game suitable for players of all ages. The Game is rated suitable for all audiences on the Apple App Store and Google Play Store.</p>
       <p>We do not knowingly collect any personal information from children under the age of 13 (or the applicable age of digital consent in your jurisdiction). Because we collect no personal data at all, the Game is safe for children to play.</p>
-      <p>However, <strong>the App Tracking Transparency (ATT) prompt</strong> relates to ad personalisation. For children under 13, parents or guardians should make the tracking consent decision. You can disable tracking for all apps on a device by going to <strong>Settings → Screen Time → Content &amp; Privacy Restrictions → Tracking</strong>.</p>
+      <p>However, ad personalisation prompts relate to advertising identifiers. For children under 13, parents or guardians should manage these settings:</p>
+      <ul>
+        <li><strong>iOS:</strong> Disable tracking for all apps via <strong>Settings → Screen Time → Content &amp; Privacy Restrictions → Tracking</strong>.</li>
+        <li><strong>Android:</strong> On Android 12+, go to <strong>Settings → Privacy → Ads → Delete advertising ID</strong> to prevent personalised ads.</li>
+      </ul>
       <p>If you believe a child has been subject to advertising practices that are inappropriate, please contact us using the details in Section 13 and we will investigate.</p>
     </div>
 
     <!-- 10. Data Security -->
     <div class="card">
       <h2><span class="num">10</span> Data Security</h2>
-      <p>Because Towerific does not transmit any gameplay data to external servers, the primary security consideration is the protection of your device's local storage, which is managed by Apple's iOS security model (sandboxing, data protection APIs).</p>
+      <p>Because Towerific does not transmit any gameplay data to external servers, the primary security consideration is the protection of your device's local storage, which is managed by the platform's security model (iOS sandboxing and data protection APIs; Android app sandboxing and scoped storage).</p>
       <p>For advertising data, Google AdMob communicates with Google's servers over encrypted HTTPS/TLS connections. We do not have control over these communications, but Google employs industry-standard security practices.</p>
-      <p>For in-app purchases, all payment data is handled exclusively by Apple's secure payment infrastructure. We never receive or store payment credentials.</p>
+      <p>For in-app purchases, all payment data is handled exclusively by Apple (iOS) or Google (Android) secure payment infrastructure. We never receive or store payment credentials.</p>
       <p>No method of electronic storage or transmission is 100% secure. However, given that we collect no personal data, the risk of a data breach affecting your personal information through our Game is minimal.</p>
     </div>
 
@@ -434,9 +463,9 @@
       <h2><span class="num">11</span> Your Rights</h2>
       <p>Because we do not collect or store personal data on our servers, many traditional data subject rights (access, rectification, portability) are not directly applicable. However, you have the following controls:</p>
       <ul>
-        <li><strong>Opt out of personalised ads:</strong> Decline the ATT prompt, or change your tracking settings in iOS Settings at any time.</li>
-        <li><strong>Reset advertising ID:</strong> On iOS, go to <strong>Settings → Privacy &amp; Security → Tracking</strong> and toggle off "Allow Apps to Request to Track". This limits ad tracking for all apps.</li>
-        <li><strong>Opt out via Google:</strong> Visit <a href="https://adssettings.google.com" target="_blank" rel="noopener noreferrer" class="ext-link">adssettings.google.com</a> to manage your Google ad preferences.</li>
+        <li><strong>Opt out of personalised ads (iOS):</strong> Decline the ATT prompt, or go to <strong>Settings → Privacy &amp; Security → Tracking → Towerific</strong> to change your choice at any time.</li>
+        <li><strong>Opt out of personalised ads (Android):</strong> Go to <strong>Settings → Privacy → Ads</strong> (Android 12+) or <strong>Settings → Google → Ads</strong> (Android 11 and below) and select "Opt out of Ads Personalisation" or "Delete advertising ID".</li>
+        <li><strong>Opt out via Google:</strong> Visit <a href="https://adssettings.google.com" target="_blank" rel="noopener noreferrer" class="ext-link">adssettings.google.com</a> to manage your Google ad preferences across platforms.</li>
         <li><strong>Delete your game data:</strong> Uninstalling the Game permanently deletes all locally stored data (scores, coins, settings, streak, XP). This action cannot be undone.</li>
         <li><strong>Contact us:</strong> If you have any questions or concerns about privacy, contact us at the address in Section 13.</li>
       </ul>
@@ -457,8 +486,8 @@
       <p>If you have any questions, concerns, or requests regarding this Privacy Policy or our data practices, please contact us. We aim to respond within 24–48 hours.</p>
       <div class="contact-box">
         <p><strong>Shayona</strong> — Towerific</p>
-        <p>Bundle ID: com.shayona.towerific</p>
-        <p>Platform: iOS (iPhone)</p>
+        <p>Bundle / Package ID: com.shayona.towerific</p>
+        <p>Platforms: iOS &amp; Android</p>
         <a href="mailto:akashmangukiya10@gmail.com">&#9993; akashmangukiya10@gmail.com</a>
       </div>
     </div>
